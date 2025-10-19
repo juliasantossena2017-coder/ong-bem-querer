@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cadastro — ONG Exemplo</title>
+  <meta name="description" content="Formulário de cadastro de voluntários e apoiadores.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="Logotipo ONG Exemplo"></a>
+      <nav aria-label="Menu principal">
+        <ul class="menu">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html">Cadastre-se</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Cadastro</h1>
+    <p>Escolha se quer se cadastrar como voluntário ou doador.</p>
+
+    <form id="cadastroForm" action="#" method="post" novalidate>
+      <fieldset>
+        <legend>Dados Pessoais</legend>
+
+        <label for="nome">Nome completo</label>
+        <input id="nome" name="nome" type="text" required minlength="3" aria-required="true">
+
+        <label for="email">E‑mail</label>
+        <input id="email" name="email" type="email" required aria-required="true">
+
+        <label for="cpf">CPF</label>
+        <input id="cpf" name="cpf" type="text" inputmode="numeric" pattern="\d{3}\.\d{3}\.\d{3}\-\d{2}" placeholder="000.000.000-00" required>
+
+        <label for="telefone">Telefone</label>
+        <input id="telefone" name="telefone" type="tel" inputmode="tel" placeholder="(00) 90000-0000" required>
+
+        <label for="nascimento">Data de Nascimento</label>
+        <input id="nascimento" name="nascimento" type="date" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>Endereço</legend>
+        <label for="cep">CEP</label>
+        <input id="cep" name="cep" type="text" inputmode="numeric" placeholder="00000-000" required>
+
+        <label for="endereco">Endereço</label>
+        <input id="endereco" name="endereco" type="text" required>
+
+        <label for="cidade">Cidade</label>
+        <input id="cidade" name="cidade" type="text" required>
+
+        <label for="estado">Estado</label>
+        <select id="estado" name="estado" required>
+          <option value="">Selecione</option>
+          <option value="PA">PA</option>
+          <option value="SP">SP</option>
+          <option value="RJ">RJ</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Perfil</legend>
+        <label>Eu sou:</label>
+        <div class="radio-group">
+          <label><input type="radio" name="perfil" value="voluntario" required> Voluntário</label>
+          <label><input type="radio" name="perfil" value="doador"> Doador</label>
+        </div>
+
+        <label for="sobre">Sobre (opcional)</label>
+        <textarea id="sobre" name="sobre" rows="4"></textarea>
+      </fieldset>
+
+      <button class="btn" type="submit">Enviar cadastro</button>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; ONG Bem Querer</p>
+    </div>
+  </footer>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
