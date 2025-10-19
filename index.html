@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Instituto Bem Querer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container">
+      <a href="#" class="logo">Instituto Bem Querer</a>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#voluntario">Voluntariado</a></li>
+          <li><a href="#doar">Doar</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero" aria-label="Apresentação">
+      <div class="container">
+        <h1>Conectando pessoas, transformando vidas</h1>
+        <p>Capacitação, assistência e engajamento comunitário — junte-se a nós.</p>
+        <a class="btn primary" href="#doar">Faça uma doação</a>
+      </div>
+    </section>
+
+    <section id="sobre" class="container section">
+      <h2>Sobre o Instituto</h2>
+      <p>O Instituto Bem Querer é uma organização sem fins lucrativos dedicada a promover inclusão social através de projetos locais e voluntariado.</p>
+    </section>
+
+    <section id="projetos" class="container section">
+      <h2>Projetos</h2>
+      <div class="cards">
+        <article class="card">
+          <img src="PROFESSORA ENSINANDO JOVENS EM SALA DE AULA.jpg" width="200px" height="100px" />
+          <h3>Capacita+</h3>
+          <p>Cursos profissionalizantes para jovens em situação de risco.</p>
+        </article>
+
+        <article class="card">
+          <img src="CESTA BÁSICA SENDO ENTREGUE POR VOLUNTÁRIOS.jpg" width="200px" height="100px" />
+          <h3>AlimentaRede</h3>
+          <p>Distribuição organizada de cestas básicas e apoio logístico.</p>
+        </article>
+
+        <article class="card">
+          <img src="GRUPO DE VOLUNTARIOS REUNIDOS 2.Png.webp" width="200px" height="100px" />
+          <h3>Voluntariado 360</h3>
+          <p>Gestão de voluntários, escalas e eventos comunitários.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="voluntario" class="container section">
+      <h2>Seja voluntário</h2>
+      <form id="volunteerForm" aria-label="Formulário de voluntariado">
+        <div class="grid">
+          <label>
+            Nome
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            Telefone
+            <input type="tel" name="phone" />
+          </label>
+          <label>
+            Áreas de interesse
+            <select name="area" required>
+              <option value="">Selecione</option>
+              <option>Educação</option>
+              <option>Logística</option>
+              <option>Comunicação</option>
+            </select>
+          </label>
+        </div>
+        <button type="submit" class="btn">Inscrever</button>
+        <div id="volunteerMsg" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+
+    <section id="doar" class="container section">
+      <h2>Doações</h2>
+      <p>Contribua com nossos projetos. Pagamentos simulados neste protótipo.</p>
+      <form id="donationForm" aria-label="Formulário de doação">
+        <label>
+          Valor (R$)
+          <input type="number" name="amount" min="1" step="0.01" required />
+        </label>
+        <label>
+          Nome do doador
+          <input type="text" name="donor_name" />
+        </label>
+        <button type="submit" class="btn primary">Doar</button>
+        <div id="donationMsg" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+
+    <section id="contato" class="container section">
+      <h2>Contato</h2>
+      <address>
+        <p>Email: <a href="mailto:contato@institutobemquerer.org.br">contato@institutobemquerer.org.br</a></p>
+        <p>Telefone: (91) 99999-0000</p>
+      </address>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Instituto Bem Querer — Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
